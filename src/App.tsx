@@ -1,25 +1,18 @@
+import { lazy } from 'react';
 import './App.css';
-import logo from './logo.svg';
+import { Container } from '@mui/material';
 
-function App() {
+const Header = lazy(() => import('./components/Header'));
+const Footer = lazy(() => import('./components/Footer'));
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          英数字：Inter 日本語：Noto SansCJK JP
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Container></Container>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
