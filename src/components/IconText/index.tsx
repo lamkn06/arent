@@ -8,7 +8,7 @@ interface Props {
   sx?: SxProps<Theme>;
 }
 
-const IconText = (props: Props): JSX.Element => {
+export const IconText = (props: Props): JSX.Element => {
   return (
     <Grid
       container
@@ -17,9 +17,7 @@ const IconText = (props: Props): JSX.Element => {
       width={{ xs: 160, md: 160 }}
     >
       <Box component="img" sx={props.sx} alt={props.alt} src={props.icon} />
-      <Typography>{props.text}</Typography>
+      <Typography paddingLeft={{ md: 1 }}>{props.text}</Typography>
     </Grid>
   );
 };
-
-export default IconText;

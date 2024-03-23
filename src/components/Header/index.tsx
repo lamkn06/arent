@@ -9,7 +9,7 @@ import iconChallenge from '../../assets/icons/icon_challenge.svg';
 import iconInfo from '../../assets/icons/icon_info.svg';
 
 import { COLOR_DARK_500 } from '../../commons/colors';
-import IconText from '../IconText';
+import { IconText } from '../IconText';
 
 const Header = (): JSX.Element => {
   return (
