@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 
 import { format } from 'date-fns';
-import d01 from '../../assets/images/d01.jpg';
+import D01 from '../../assets/images/d01.jpg';
 import { COLOR_LIGHT, COLOR_PRIMARY_500 } from '../../commons/colors';
 import { MenuButtons } from './components/MenuButtons';
 import { MenuList } from './components/MenuList';
@@ -26,7 +26,7 @@ const HomePage = () => {
           width={{ md: 540 }}
           height={{ md: 312 }}
           sx={{
-            backgroundImage: `url(${d01})`,
+            backgroundImage: `url(${D01})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -74,12 +74,7 @@ const HomePage = () => {
         </Box>
         <Box flex={1}>w</Box>
       </Grid>
-      <Container
-        disableGutters
-        sx={{
-          maxWidth: { md: 960 },
-        }}
-      >
+      <Container disableGutters>
         <Box m={'40px 0'}>
           <MenuButtons />
         </Box>

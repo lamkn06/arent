@@ -1,5 +1,5 @@
 import { Box, Grid, Link } from '@mui/material';
-import m01 from '../../../assets/images/m01.jpg';
+import M01 from '../../../assets/images/m01.jpg';
 import { ThumbnailBox } from '../../../components/ThumbnailBox';
 
 const Item = ({ children }: { children: React.ReactNode }): JSX.Element => {
@@ -18,28 +18,28 @@ export const MenuList = (): JSX.Element => {
   return (
     <Grid container spacing={1}>
       <Item>
-        <ThumbnailBox src={m01} />
+        <ThumbnailBox src={M01} />
       </Item>
       <Item>
-        <ThumbnailBox src={m01} />
+        <ThumbnailBox src={M01} />
       </Item>
       <Item>
-        <ThumbnailBox src={m01} />
+        <ThumbnailBox src={M01} />
       </Item>
       <Item>
-        <ThumbnailBox src={m01} />
+        <ThumbnailBox src={M01} />
       </Item>
       <Item>
-        <ThumbnailBox src={m01} />
+        <ThumbnailBox src={M01} />
       </Item>
       <Item>
-        <ThumbnailBox src={m01} />
+        <ThumbnailBox src={M01} />
       </Item>
       <Item>
-        <ThumbnailBox src={m01} />
+        <ThumbnailBox src={M01} />
       </Item>
       <Item>
-        <ThumbnailBox src={m01} />
+        <ThumbnailBox src={M01} />
       </Item>
     </Grid>
   );

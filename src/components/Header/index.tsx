@@ -3,10 +3,10 @@ import { AppBar, Grid, IconButton, Toolbar } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
-import logo from '../../assets/images/logo.svg';
-import iconMemo from '../../assets/icons/icon_memo.svg';
-import iconChallenge from '../../assets/icons/icon_challenge.svg';
-import iconInfo from '../../assets/icons/icon_info.svg';
+import Logo from '../../assets/images/logo.svg';
+import IconMemo from '../../assets/icons/icon_memo.svg';
+import IconChallenge from '../../assets/icons/icon_challenge.svg';
+import IconInfo from '../../assets/icons/icon_info.svg';
 
 import { COLOR_DARK_500 } from '../../commons/colors';
 import { IconText } from '../IconText';
@@ -31,7 +31,7 @@ const Header = (): JSX.Element => {
                     width: 144,
                   }}
                   alt="Health"
-                  src={logo}
+                  src={Logo}
                 />
               </Grid>
               <Grid item xs={6} md={8}>
@@ -43,7 +43,7 @@ const Header = (): JSX.Element => {
                   alignItems="center"
                 >
                   <IconText
-                    icon={iconMemo}
+                    icon={IconMemo}
                     alt="自分の記録"
                     text="自分の記録"
                     sx={{
@@ -52,7 +52,7 @@ const Header = (): JSX.Element => {
                     }}
                   />
                   <IconText
-                    icon={iconChallenge}
+                    icon={IconChallenge}
                     alt="チャレンジ"
                     text="チャレンジ"
                     sx={{
@@ -61,7 +61,7 @@ const Header = (): JSX.Element => {
                     }}
                   />
                   <IconText
-                    icon={iconInfo}
+                    icon={IconInfo}
                     alt="お知らせ"
                     text="お知らせ"
                     sx={{

@@ -1,4 +1,4 @@
-import { ThemeProvider, createTheme } from '@mui/material';
+import { Container, ThemeProvider, createTheme } from '@mui/material';
 import { lazy } from 'react';
 import {
   COLOR_DARK_500,
@@ -11,6 +11,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 const Header = lazy(() => import('./components/Header'));
 const Footer = lazy(() => import('./components/Footer'));
 const HomePage = lazy(() => import('./pages/HomePage'));
+const SelfRecordPage = lazy(() => import('./pages/SelfRecordPage'));
+
 const theme = createTheme({
   typography: {
     fontFamily: 'Noto Sans JP, sans-serif',
@@ -45,15 +47,24 @@ const router = createBrowserRouter([
     path: '/',
     element: <HomePage />,
   },
+  {
+    path: '/self-record',
+    element: <SelfRecordPage />,
+  },
 ]);
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <article>
+      <Container
+        disableGutters
+        sx={{
+          maxWidth: { md: 960 },
+        }}
+      >
         <RouterProvider router={router} />
-      </article>
+      </Container>
       <Footer />
     </ThemeProvider>
   );
