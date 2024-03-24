@@ -18,7 +18,7 @@ const HomePage = () => {
   const value = 75;
   const date = format(new Date(), 'MM/dd');
   return (
-    <Container>
+    <Container disableGutters>
       <Grid container>
         <Box
           display={'flex'}

@@ -4,7 +4,7 @@ import { Grid, Typography } from '@mui/material';
 
 const Item = (props: { text: string }): JSX.Element => {
   return (
-    <Grid item spacing={10} paddingRight={6}>
+    <Grid item paddingRight={6}>
       <Typography>{props.text}</Typography>
     </Grid>
   );

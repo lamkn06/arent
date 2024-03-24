@@ -1,14 +1,15 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Grid, IconButton, Toolbar } from '@mui/material';
+import { AppBar, Grid, IconButton, Link, Toolbar } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
-import Logo from '../../assets/images/logo.svg';
-import IconMemo from '../../assets/icons/icon_memo.svg';
 import IconChallenge from '../../assets/icons/icon_challenge.svg';
 import IconInfo from '../../assets/icons/icon_info.svg';
+import IconMemo from '../../assets/icons/icon_memo.svg';
+import Logo from '../../assets/images/logo.svg';
 
-import { COLOR_DARK_500 } from '../../commons/colors';
+import { NavLink } from 'react-router-dom';
+import { COLOR_DARK_500, COLOR_PRIMARY_400 } from '../../commons/colors';
 import { IconText } from '../IconText';
 
 const Header = (): JSX.Element => {
@@ -25,14 +26,16 @@ const Header = (): JSX.Element => {
           <Toolbar>
             <Grid container spacing={2}>
               <Grid item xs={6} md={4}>
-                <Box
-                  component="img"
-                  sx={{
-                    width: 144,
-                  }}
-                  alt="Health"
-                  src={Logo}
-                />
+                <Link component={NavLink} to="/">
+                  <Box
+                    component="img"
+                    sx={{
+                      width: 144,
+                    }}
+                    alt="Health"
+                    src={Logo}
+                  />
+                </Link>
               </Grid>
               <Grid item xs={6} md={8}>
                 <Grid
@@ -42,15 +45,25 @@ const Header = (): JSX.Element => {
                   justifyContent="flex-end"
                   alignItems="center"
                 >
-                  <IconText
-                    icon={IconMemo}
-                    alt="自分の記録"
-                    text="自分の記録"
+                  <Link
+                    component={NavLink}
+                    to="/self-record"
                     sx={{
-                      height: 32,
-                      width: 32,
+                      '&.active p': {
+                        color: COLOR_PRIMARY_400,
+                      },
                     }}
-                  />
+                  >
+                    <IconText
+                      icon={IconMemo}
+                      alt="自分の記録"
+                      text="自分の記録"
+                      sx={{
+                        height: 32,
+                        width: 32,
+                      }}
+                    />
+                  </Link>
                   <IconText
                     icon={IconChallenge}
                     alt="チャレンジ"
