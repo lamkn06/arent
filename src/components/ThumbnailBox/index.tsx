@@ -1,10 +1,9 @@
 import { Box, Typography } from '@mui/material';
-import IconKnife from '../../assets/icons/icon_knife.svg';
-import HexagonalBG from '../../assets/images/hexagonal-bg.svg';
-import { COLOR_PRIMARY_300, COLOR_PRIMARY_500 } from '../../commons/colors';
+import { COLOR_PRIMARY_300 } from '../../commons/colors';
 
 interface Props {
   src: string;
+  text: string;
 }
 
 export const ThumbnailBox = (props: Props): JSX.Element => {
@@ -31,7 +30,9 @@ export const ThumbnailBox = (props: Props): JSX.Element => {
           backgroundColor: COLOR_PRIMARY_300,
         }}
       >
-        <Typography>05.20.Morning</Typography>
+        <Typography fontFamily={'Inter'} fontSize={15} fontWeight={400}>
+          {props.text}
+        </Typography>
       </Box>
     </Box>
   );

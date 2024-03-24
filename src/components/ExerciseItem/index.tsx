@@ -37,12 +37,18 @@ export const ExerciseItem = (props: ExerciseItemProps): JSX.Element => {
             fontWeight={400}
             color={COLOR_PRIMARY_300}
             lineHeight={'18px'}
+            fontFamily={'Inter'}
           >
             {props.kcal}
           </Typography>
         </Grid>
         <Grid item>
-          <Typography fontSize={18} fontWeight={400} color={COLOR_PRIMARY_300}>
+          <Typography
+            fontSize={18}
+            fontWeight={400}
+            color={COLOR_PRIMARY_300}
+            fontFamily={'Inter'}
+          >
             {props.time}
           </Typography>
         </Grid>

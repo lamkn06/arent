@@ -30,11 +30,7 @@ export const HexagonalBox = (props: Props): JSX.Element => {
           backgroundPosition: 'center',
         }}
       />
-      <Typography
-        sx={{
-          textDecoration: 'none',
-        }}
-      >
+      <Typography fontFamily={'Inter'} fontWeight={400}>
         {props.text}
       </Typography>
     </Box>

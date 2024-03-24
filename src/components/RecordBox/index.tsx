@@ -52,7 +52,12 @@ export const RecordBox = (props: Props): JSX.Element => {
         flexDirection={'column'}
         marginTop="10px"
       >
-        <Typography fontSize={25} fontWeight={400} color={COLOR_PRIMARY_300}>
+        <Typography
+          fontSize={25}
+          fontWeight={400}
+          color={COLOR_PRIMARY_300}
+          fontFamily={'Inter'}
+        >
           {props.title}
         </Typography>
         <Box
