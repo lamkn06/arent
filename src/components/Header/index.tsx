@@ -13,7 +13,7 @@ import { IconText } from '../IconText';
 
 const Header = (): JSX.Element => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ height: 64 }}>
       <AppBar
         position="static"
         sx={{
@@ -28,7 +28,6 @@ const Header = (): JSX.Element => {
                 <Box
                   component="img"
                   sx={{
-                    height: 64,
                     width: 144,
                   }}
                   alt="Health"

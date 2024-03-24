@@ -15,7 +15,7 @@ const Item = ({ children }: { children: React.ReactNode }): JSX.Element => {
 
 export const MenuButtons = (): JSX.Element => {
   return (
-    <Grid container spacing={2} margin={'20px 0'}>
+    <Grid container spacing={2}>
       <Item>
         <HexagonalBox text="Morning" />
       </Item>

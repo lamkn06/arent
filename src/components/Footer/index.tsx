@@ -12,15 +12,29 @@ const Item = (props: { text: string }): JSX.Element => {
 
 const Footer = (): JSX.Element => {
   return (
-    <footer style={{ backgroundColor: COLOR_DARK_500, color: COLOR_LIGHT }}>
+    <footer
+      style={{
+        backgroundColor: COLOR_DARK_500,
+        color: COLOR_LIGHT,
+        marginTop: 'auto',
+      }}
+    >
       <Container
         sx={{
+          flexDirection: ['column', 'row'],
           display: 'flex',
           alignItems: 'center',
-          height: 128,
+          height: ['auto', 128],
         }}
       >
-        <Grid container spacing={1}>
+        <Grid
+          container
+          spacing={1}
+          sx={{
+            flexDirection: ['column', 'row'],
+            alignItems: 'center',
+          }}
+        >
           <Item text={'会員登録'} />
           <Item text={'運営会社'} />
           <Item text={'利用規約'} />

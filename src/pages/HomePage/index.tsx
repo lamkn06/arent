@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   CircularProgress,
   Container,
   Grid,
@@ -10,6 +11,7 @@ import { format } from 'date-fns';
 import d01 from '../../assets/images/d01.jpg';
 import { COLOR_LIGHT, COLOR_PRIMARY_500 } from '../../commons/colors';
 import { MenuButtons } from './components/MenuButtons';
+import { MenuList } from './components/MenuList';
 
 const HomePage = () => {
   const value = 75;
@@ -72,7 +74,27 @@ const HomePage = () => {
         </Box>
         <Box flex={1}>w</Box>
       </Grid>
-      <MenuButtons />
+      <Container
+        disableGutters
+        sx={{
+          maxWidth: { md: 960 },
+        }}
+      >
+        <Box m={'40px 0'}>
+          <MenuButtons />
+        </Box>
+        <Box m={'40px 0'}>
+          <MenuList />
+        </Box>
+        <Box
+          m={'40px 0'}
+          justifyContent={'center'}
+          display={'flex'}
+          alignContent={'center'}
+        >
+          <Button>記録をもっと見る</Button>
+        </Box>
+      </Container>
     </Container>
   );
 };
