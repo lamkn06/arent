@@ -1,6 +1,5 @@
 import { Box, Grid, Link } from '@mui/material';
 
-import { RecordBox } from '../../../components/RecordBox';
 import { DairyBox } from '../../../components/DiaryBox';
 
 const data = [

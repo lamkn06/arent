@@ -14,3 +14,20 @@ body {
   flex-direction: column;
 }
 
+
+::-webkit-scrollbar {
+  width: 6px;
+  
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-track-piece {
+  background: #777777;
+  border-radius: 6px;
+
+}
+::-webkit-scrollbar-thumb {
+  background: #FFCC21;
+  border-radius: 6px;
+}

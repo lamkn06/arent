@@ -12,6 +12,7 @@ import D01 from '../../assets/images/d01.jpg';
 import { COLOR_LIGHT, COLOR_PRIMARY_500 } from '../../commons/colors';
 import { MenuButtons } from './components/MenuButtons';
 import { MenuList } from './components/MenuList';
+import Section from '../../components/Section';
 
 const HomePage = () => {
   const value = 75;
@@ -75,20 +76,21 @@ const HomePage = () => {
         <Box flex={1}>w</Box>
       </Grid>
       <Container disableGutters>
-        <Box m={'40px 0'}>
+        <Section>
           <MenuButtons />
-        </Box>
-        <Box m={'40px 0'}>
+        </Section>
+        <Section>
           <MenuList />
-        </Box>
-        <Box
-          m={'40px 0'}
-          justifyContent={'center'}
-          display={'flex'}
-          alignContent={'center'}
+        </Section>
+        <Section
+          sx={{
+            justifyContent: 'center',
+            display: 'flex',
+            alignContent: 'center',
+          }}
         >
           <Button>記録をもっと見る</Button>
-        </Box>
+        </Section>
       </Container>
     </Container>
   );
