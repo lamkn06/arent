@@ -1,14 +1,14 @@
 import { Box, Typography } from '@mui/material';
 import { COLOR_DARK_500, COLOR_GRAY } from '../../commons/colors';
 
-interface Props {
+interface DairyBoxProps {
   day: string;
   time: string;
   title: string;
   content: string;
 }
 
-export const DairyBox = (props: Props): JSX.Element => {
+export const DairyBox = (props: DairyBoxProps): JSX.Element => {
   return (
     <Box
       height={230}

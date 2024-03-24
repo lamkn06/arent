@@ -1,12 +1,12 @@
 import { Box, Typography } from '@mui/material';
 import { COLOR_PRIMARY_300 } from '../../commons/colors';
 
-interface Props {
+interface ThumbnailBoxProps {
   src: string;
   text: string;
 }
 
-export const ThumbnailBox = (props: Props): JSX.Element => {
+export const ThumbnailBox = (props: ThumbnailBoxProps): JSX.Element => {
   return (
     <Box
       width={234}

@@ -2,11 +2,11 @@ import { Box, Typography } from '@mui/material';
 import IconKnife from '../../assets/icons/icon_knife.svg';
 import HexagonalBG from '../../assets/images/hexagonal-bg.svg';
 
-interface Props {
+interface HexagonalBoxProps {
   text: string;
 }
 
-export const HexagonalBox = (props: Props): JSX.Element => {
+export const HexagonalBox = (props: HexagonalBoxProps): JSX.Element => {
   return (
     <Box
       display={'flex'}

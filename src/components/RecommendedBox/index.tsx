@@ -5,12 +5,12 @@ import {
   COLOR_PRIMARY_300,
 } from '../../commons/colors';
 
-interface Props {
+interface RecommendedBoxProps {
   title: string;
   text: string;
 }
 
-export const RecommendedBox = (props: Props): JSX.Element => {
+export const RecommendedBox = (props: RecommendedBoxProps): JSX.Element => {
   return (
     <Box
       height={144}

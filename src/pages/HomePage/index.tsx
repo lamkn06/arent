@@ -13,10 +13,21 @@ import { COLOR_LIGHT, COLOR_PRIMARY_500 } from '../../commons/colors';
 import { MenuButtons } from './components/MenuButtons';
 import { MenuList } from './components/MenuList';
 import Section from '../../components/Section';
+import { useState } from 'react';
+import { Loading } from '../../components/Loading';
 
 const HomePage = () => {
   const value = 75;
   const date = format(new Date(), 'MM/dd');
+
+  const [loading, setLoading] = useState(false);
+  const handleLoading = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
+
   return (
     <Container disableGutters>
       <Grid container>
@@ -82,6 +93,11 @@ const HomePage = () => {
         <Section>
           <MenuList />
         </Section>
+        {loading && (
+          <Section>
+            <Loading />
+          </Section>
+        )}
         <Section
           sx={{
             justifyContent: 'center',
@@ -89,7 +105,7 @@ const HomePage = () => {
             alignContent: 'center',
           }}
         >
-          <Button>記録をもっと見る</Button>
+          <Button onClick={handleLoading}>記録をもっと見る</Button>
         </Section>
       </Container>
     </Container>

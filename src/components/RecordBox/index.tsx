@@ -1,13 +1,13 @@
 import { Box, Typography } from '@mui/material';
 import { COLOR_PRIMARY_300, COLOR_PRIMARY_400 } from '../../commons/colors';
 
-interface Props {
+interface RecordBoxProps {
   title: string;
   text: string;
   src: string;
 }
 
-export const RecordBox = (props: Props): JSX.Element => {
+export const RecordBox = (props: RecordBoxProps): JSX.Element => {
   return (
     <Box
       height={288}

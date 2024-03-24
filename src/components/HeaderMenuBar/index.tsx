@@ -22,7 +22,7 @@ const data = [
   },
   {
     title: 'コラム一覧',
-    link: '/',
+    link: '/blogs',
   },
   {
     title: '設定',

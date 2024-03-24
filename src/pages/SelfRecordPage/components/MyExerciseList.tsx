@@ -67,7 +67,7 @@ export const MyExerciseList = (): JSX.Element => {
         <Typography marginLeft={'20px'} fontSize={22}>
           2021.05.21
         </Typography>
-      </Box>{' '}
+      </Box>
       <ExerciseList items={items} maxHeight={210} />
     </Box>
   );

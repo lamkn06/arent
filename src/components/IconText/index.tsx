@@ -1,14 +1,14 @@
 import { Grid, SxProps, Theme, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 
-interface Props {
+interface IconTextProps {
   icon: string;
   text: string;
   alt?: string;
   sx?: SxProps<Theme>;
 }
 
-export const IconText = (props: Props): JSX.Element => {
+export const IconText = (props: IconTextProps): JSX.Element => {
   return (
     <Grid
       container

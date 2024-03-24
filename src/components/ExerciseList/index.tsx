@@ -1,12 +1,12 @@
 import { Grid, Box } from '@mui/material';
 import { ExerciseItem, ExerciseItemProps } from '../ExerciseItem';
 
-interface Props {
+interface ExerciseListProps {
   items: ExerciseItemProps[];
   maxHeight?: number;
 }
 
-export const ExerciseList = (props: Props): JSX.Element => {
+export const ExerciseList = (props: ExerciseListProps): JSX.Element => {
   return (
     <Box
       sx={{

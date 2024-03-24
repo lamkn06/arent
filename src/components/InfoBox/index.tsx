@@ -6,7 +6,7 @@ import {
   COLOR_PRIMARY_400,
 } from '../../commons/colors';
 
-interface Props {
+interface InfoBoxProps {
   src: string;
   day: string;
   time: string;
@@ -14,7 +14,7 @@ interface Props {
   tags: string[];
 }
 
-export const InfoBox = (props: Props): JSX.Element => {
+export const InfoBox = (props: InfoBoxProps): JSX.Element => {
   return (
     <Box height={224} width={234}>
       <Box
