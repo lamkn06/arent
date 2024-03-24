@@ -1,5 +1,12 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Grid, IconButton, Link, Toolbar } from '@mui/material';
+import {
+  AppBar,
+  ClickAwayListener,
+  Grid,
+  IconButton,
+  Link,
+  Toolbar,
+} from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
@@ -8,11 +15,15 @@ import IconInfo from '../../assets/icons/icon_info.svg';
 import IconMemo from '../../assets/icons/icon_memo.svg';
 import Logo from '../../assets/images/logo.svg';
 
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { COLOR_DARK_500, COLOR_PRIMARY_400 } from '../../commons/colors';
+import HeaderMenuBar from '../HeaderMenuBar';
 import { IconText } from '../IconText';
 
 const Header = (): JSX.Element => {
+  const [show, setShow] = useState(false);
+
   return (
     <Box sx={{ height: 64 }}>
       <AppBar
@@ -22,9 +33,12 @@ const Header = (): JSX.Element => {
           backgroundColor: COLOR_DARK_500,
         }}
       >
-        <Container>
-          <Toolbar>
-            <Grid container spacing={2}>
+        <Container
+          sx={{ maxWidth: { md: 960 }, position: 'relative' }}
+          disableGutters
+        >
+          <Toolbar disableGutters>
+            <Grid container>
               <Grid item xs={6} md={4}>
                 <Link component={NavLink} to="/">
                   <Box
@@ -87,7 +101,8 @@ const Header = (): JSX.Element => {
                     edge="start"
                     color="inherit"
                     aria-label="menu"
-                    sx={{ mr: 2 }}
+                    sx={{ mr: 0, p: 0 }}
+                    onClick={() => setShow(!show)}
                   >
                     <MenuIcon />
                   </IconButton>
@@ -95,6 +110,13 @@ const Header = (): JSX.Element => {
               </Grid>
             </Grid>
           </Toolbar>
+          {show && (
+            <ClickAwayListener onClickAway={() => setShow(false)}>
+              <Box position={'absolute'} right={0} top={64} zIndex={9}>
+                <HeaderMenuBar />
+              </Box>
+            </ClickAwayListener>
+          )}
         </Container>
       </AppBar>
     </Box>
