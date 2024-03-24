@@ -16,9 +16,10 @@ export const ExerciseList = (props: Props): JSX.Element => {
       }}
     >
       <Grid container>
-        {props.items.map((item: ExerciseItemProps) => {
+        {props.items.map((item: ExerciseItemProps, index) => {
           return (
             <Grid
+              key={index}
               item
               xs={6}
               sx={{
@@ -26,9 +27,9 @@ export const ExerciseList = (props: Props): JSX.Element => {
               }}
             >
               <ExerciseItem
-                title={'家事全般（立位・軽い）'}
-                kcal={'26kcal'}
-                time={'10 min'}
+                title={item.title}
+                kcal={item.kcal}
+                time={item.time}
               />
             </Grid>
           );

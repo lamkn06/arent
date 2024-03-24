@@ -6,6 +6,7 @@ import { customMuiButton, customMuiLink } from './customStyle';
 const Layout = lazy(() => import('./components/Layout'));
 const HomePage = lazy(() => import('./pages/HomePage'));
 const SelfRecordPage = lazy(() => import('./pages/SelfRecordPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
 
 const theme = createTheme({
   typography: {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/self-record',
         element: <SelfRecordPage />,
+      },
+      {
+        path: '/blogs',
+        element: <BlogPage />,
       },
     ],
   },
