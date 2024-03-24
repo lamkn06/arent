@@ -15,6 +15,7 @@ import { MenuList } from './components/MenuList';
 import Section from '../../components/Section';
 import { useState } from 'react';
 import { Loading } from '../../components/Loading';
+import { Record } from './components/Record';
 
 const HomePage = () => {
   const value = 75;
@@ -84,9 +85,16 @@ const HomePage = () => {
             </Typography>
           </Box>
         </Box>
-        <Box flex={1}>w</Box>
+        <Box flex={1}>
+          <Record />
+        </Box>
       </Grid>
-      <Container disableGutters>
+      <Container
+        disableGutters
+        sx={{
+          maxWidth: { md: 960 },
+        }}
+      >
         <Section>
           <MenuButtons />
         </Section>

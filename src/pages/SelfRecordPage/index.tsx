@@ -18,7 +18,12 @@ const SelfRecordPage = () => {
   };
 
   return (
-    <Container disableGutters>
+    <Container
+      disableGutters
+      sx={{
+        maxWidth: { md: 960 },
+      }}
+    >
       <Section>
         <MenuButtons />
       </Section>

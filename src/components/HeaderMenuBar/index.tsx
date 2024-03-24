@@ -30,7 +30,11 @@ const data = [
   },
 ];
 
-const HeaderMenuBar = (): JSX.Element => {
+interface HeaderMenuBarProps {
+  onClick(): void;
+}
+
+const HeaderMenuBar = (props: HeaderMenuBarProps): JSX.Element => {
   return (
     <Box
       width={280}
@@ -39,7 +43,12 @@ const HeaderMenuBar = (): JSX.Element => {
       }}
     >
       {data.map((item, index) => (
-        <Link component={RouterLink} to={item.link} key={index}>
+        <Link
+          component={RouterLink}
+          to={item.link}
+          key={index}
+          onClick={props.onClick}
+        >
           <Box
             display={'flex'}
             alignItems={'center'}

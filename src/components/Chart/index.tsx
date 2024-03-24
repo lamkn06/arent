@@ -68,6 +68,7 @@ const options = {
 
 interface ChartProps {
   data: any;
+  height?: number;
 }
 
 export const Chart = (props: ChartProps): JSX.Element => {
@@ -76,7 +77,7 @@ export const Chart = (props: ChartProps): JSX.Element => {
       sx={{
         background: COLOR_DARK_500,
       }}
-      height={185}
+      height={props.height ?? 185}
       width={'100%'}
     >
       <Line options={options} data={props.data} />

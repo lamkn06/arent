@@ -8,31 +8,36 @@ interface ThumbnailBoxProps {
 
 export const ThumbnailBox = (props: ThumbnailBoxProps): JSX.Element => {
   return (
-    <Box
-      width={234}
-      height={234}
-      position={'relative'}
-      sx={{
-        backgroundImage: `url(${props.src})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+    <Box overflow={'hidden'} position={'relative'}>
       <Box
-        position={'absolute'}
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'center'}
-        p={'0 10px'}
-        height={32}
-        bottom={0}
+        width={234}
+        height={234}
         sx={{
-          backgroundColor: COLOR_PRIMARY_300,
+          backgroundImage: `url(${props.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          transition: 'all 0.5s',
+          ':hover': {
+            transform: ' scale(120%)',
+          },
         }}
       >
-        <Typography fontFamily={'Inter'} fontSize={15} fontWeight={400}>
-          {props.text}
-        </Typography>
+        <Box
+          position={'absolute'}
+          display={'flex'}
+          alignItems={'center'}
+          justifyContent={'center'}
+          p={'0 10px'}
+          height={32}
+          bottom={0}
+          sx={{
+            backgroundColor: COLOR_PRIMARY_300,
+          }}
+        >
+          <Typography fontFamily={'Inter'} fontSize={15} fontWeight={400}>
+            {props.text}
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );

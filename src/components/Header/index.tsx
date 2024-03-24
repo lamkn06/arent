@@ -104,7 +104,11 @@ const Header = (): JSX.Element => {
                     sx={{ mr: 0, p: 0 }}
                     onClick={() => setShow(!show)}
                   >
-                    <MenuIcon />
+                    <MenuIcon
+                      sx={{
+                        color: COLOR_PRIMARY_400,
+                      }}
+                    />
                   </IconButton>
                 </Grid>
               </Grid>
@@ -113,7 +117,7 @@ const Header = (): JSX.Element => {
           {show && (
             <ClickAwayListener onClickAway={() => setShow(false)}>
               <Box position={'absolute'} right={0} top={64} zIndex={9}>
-                <HeaderMenuBar />
+                <HeaderMenuBar onClick={() => setShow(false)} />
               </Box>
             </ClickAwayListener>
           )}

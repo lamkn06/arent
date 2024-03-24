@@ -11,7 +11,6 @@ const Layout = (): JSX.Element => {
       <Container
         disableGutters
         sx={{
-          maxWidth: { md: 960 },
           paddingBottom: 4,
         }}
       >

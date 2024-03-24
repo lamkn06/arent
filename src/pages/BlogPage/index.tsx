@@ -6,7 +6,12 @@ import { InfoList } from './components/InfoList';
 
 const BlogPage = () => {
   return (
-    <Container disableGutters>
+    <Container
+      disableGutters
+      sx={{
+        maxWidth: { md: 960 },
+      }}
+    >
       <Section>
         <RecommendedList />
       </Section>

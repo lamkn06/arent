@@ -32,6 +32,7 @@ export const RecordBox = (props: RecordBoxProps): JSX.Element => {
           backgroundSize: 'cover',
           backgroundColor: 'rgba(0, 0, 0, 1)',
           backgroundBlendMode: 'luminosity',
+          transition: 'all 0.5s',
           '&::before': {
             content: '""',
             position: 'absolute',
@@ -41,6 +42,9 @@ export const RecordBox = (props: RecordBoxProps): JSX.Element => {
             left: 0,
             backgroundColor: '#000',
             opacity: 0.5,
+          },
+          ':hover': {
+            transform: ' scale(110%)',
           },
         }}
       />
